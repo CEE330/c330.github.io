@@ -1,0 +1,373 @@
+/*General Layout*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Muli', sans-serif;
+    background-color: #181818;
+    color: azure;
+    font-weight: 400;
+    font-size: 18px;
+    text-rendering: optimizeLegibility;
+}
+
+/* === Common === */
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+section {
+   padding: 80px 0; 
+}
+
+.box {
+    padding: 1%;
+
+}
+
+.box p{
+    text-align: left;
+}
+
+/* === Headings === */
+
+h1, 
+h2,
+h3 {
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h1 {
+    margin: 0;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 240%;
+    word-spacing: 4px;
+}
+
+h2 {
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+
+}
+
+h3 {
+    font-size: 110%;
+    margin-bottom: 15px;
+}
+
+h2:after {
+    display: block;
+    height: 2px;
+    background-color: #ff5112;
+    content: " ";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+
+/* === Buttons === */
+
+.btn:link,
+.btn:visited,
+input[type=submit] {
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 50px;
+    -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.btn-full:link,
+.btn-full:visited,
+input[type=submit] {
+    background-color: #ff4500;
+    color: #fff;
+    border: 1px solid #ff4500;
+    margin-right: 15px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+    border: 1px solid #ff4500;
+    color: #ff4500;
+}
+
+.btn:hover,
+.btn:active,
+input[type=submit]:hover,
+input[type=submit]:active {
+    background-color: #ff5112;
+}
+
+.btn-full:hover,
+.btn-full:active {
+    border: 1px solid #ff5112;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+    border: 1px solid #ff5112;
+    color: #fff;
+}
+
+/* === Header === */
+
+header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/barbell.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.greeting-box{
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.logo {
+    height: 55px;
+    width: auto;
+    float: left;
+    margin-top: 5px;
+}
+
+.logo-black {
+    display: none;
+    height: 50px;
+    width: auto;
+    float: left;
+    margin: 5px 0;
+}
+
+/* === Main Nav === */
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 20px;
+}
+
+.main-nav li {
+   display: inline-block;
+    margin-left: 40px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+    -webkit-transition: border-bottom 0.2s;
+    transition: border-bottom 0.2s;
+    padding: 8px 0;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid #ff5112;
+}
+
+/* === Sticky Nav === */
+
+.sticky {
+    position: fixed; 
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #181818;
+      z-index: 9999;
+  }
+  
+  .sticky .main-nav {margin-top: 20px;}
+  
+  .sticky .main-nav li a:link,
+  .sticky .main-nav li a:visited {
+      color: #f4f4f4;
+      padding: 16px 0;
+  }
+  
+  .sticky .logo {display: block;}
+  .sticky .logo-black {display: none;}
+  
+  /* === Mobile Nav === */
+  
+  .mobile-nav-icon {
+    float: right;
+    margin-top: 30px;
+    cursor: pointer;   
+    display: none;
+  }
+  
+  .mobile-nav-icon i {
+      font-size: 200%;
+      color: #fff;  
+  }
+
+/* === About === */
+
+.section-about {
+    background-color: #f4f4f4;
+    color: #181818;
+}
+
+.about-box:first-child {
+    margin-top: 30px;
+    text-align: left;
+    padding-left: 10%;
+}
+
+.about-box:last-child {
+    margin-top: 60px;
+    text-align: left;
+}
+
+.sledpush {
+    width: 60%;
+}
+
+.about-goals li {
+    list-style: none;
+    color: #181818;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    padding: 8px 0;
+}
+
+/* === Goals === */
+
+.section-goals {
+    background-color: #181818;
+    color: #f4f4f4;
+}
+
+.goals-box:first-child {
+    margin-top: 5px;
+    text-align: right;
+    padding-right: 10%;
+}
+
+.goals-box:last-child {
+    margin-top: 25px;
+    text-align: left;
+    padding-left: 3%;
+}
+
+.sledpush {
+    width: 90%;
+}
+
+.section-goals li {
+    list-style: none;
+    color: #f4f4f4;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    padding: 7px 0;
+}
+
+/* === Services === */
+
+.section-services {
+    background-color: #f4f4f4;
+    color: #181818;
+    text-align: center;
+}
+
+.section-services img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+/* === Contact === */
+
+.contact-form {
+    width: 60%;
+    margin: 0 auto;
+}
+
+input[type=text],
+input[type=email],
+select,
+textarea {
+    width: 100%;
+    padding: 6px;
+    border-radius: 3px;
+    border: 1px solid #cccccc;
+}
+
+textarea {
+    height: 100px;
+}
+
+*:focus {
+    outline: none;
+}
+
+/* === Footer === */
+
+footer {
+    padding: 40px;
+    background-color: #333;
+    color: #e6e6e6;
+    font-size: 80%;
+}
+
+.social-icons {
+    list-style: none;
+    text-align: center;
+}
+
+.social-icons li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.social-icons li:last-child {
+    margin-right: 0;
+}
+ 
+.social-icons li a:link,
+.social-icons li a:visited {
+    text-decoration: none;
+    border-bottom: 0;
+    color: #f4f4f4;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+
+.social-icons li a:hover,
+.social-icons li a:active {
+    text-decoration: none;
+    border-bottom: 0;
+    color: #ff4500;
+}
+
+.social-icons li a:visited,
+.social-icons li a:link {
+    font-size: 150%;
+}
+
+footer p {
+    margin-top: 20px;
+    color: #888;
+    text-align: center;
+}
